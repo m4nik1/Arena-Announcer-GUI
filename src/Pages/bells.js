@@ -2,10 +2,11 @@ import React from "react"
 
 import Button from 'react-bootstrap/Button';
 import "../CSS/content.css"
+import postRequest from "../other/requests";
 
 function leagueWinButton()
 {
-  console.log("awesome")
+    postRequest();
 }
 
 
@@ -22,6 +23,7 @@ export default function Bells() {
           </select>
           <Button variant="dark" type="submit">League Gam Win</Button>
         </form>
+        <Button variant="dark" onClick={leagueWinButton}>Ping server</Button>
       </div>
     )
 }
