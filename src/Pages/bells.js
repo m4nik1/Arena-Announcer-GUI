@@ -2,11 +2,18 @@ import React from "react"
 
 import Button from 'react-bootstrap/Button';
 import "../CSS/content.css"
-import postRequest from "../other/requests";
+import axios from "axios";
+// import postRequest from "../other/requests";
 
 function leagueWinButton()
 {
-    postRequest();
+    axios({
+      method:'post',
+      url: "http://localhost:8080/test",
+      data: { 
+        first: "testing"
+       }
+    });
 }
 
 
